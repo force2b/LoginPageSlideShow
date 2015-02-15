@@ -30,3 +30,13 @@ An example: https://f2b-login-helper-app-dev-ed.my.salesforce.com?login
 #### My Domain Configuration
 * Under My Domain, add the Force.com Site URL (must be the HTTPS version) you created above, specifying the LoginPageSlideShow visualforce page at the end.
 ![My Domain Configuration](https://f2b-login-helper-app-dev-ed--c.na16.content.force.com/servlet/servlet.ImageServer?id=015j00000004L90&oid=00Dj0000001tMup)
+
+##### Login Page Image Guidelines
+* For the "Right Frame URL", the window Salesforce provides on the login page for images is restricted in size. For your images to fit properly and scale correctly, images should be in JPEG, GIF or PNG format and be cropped or scaled to as close the window dimensions as possible:
+    * Height: 390px
+    * Width: 478px
+* If needed, use a free application such as Paint.net (http://www.getpaint.net/) to resize your image files.
+* Header Logo: 
+    * This is the image that appears above the Username and Password fields. 
+    * The maximum dimension height and width for these images is 250 x 125 pixels, however the image can be smaller.
+    * When appropriate, use an image with a transparent background to allow an image with a normally white background to blend smoothly onto the login page.
