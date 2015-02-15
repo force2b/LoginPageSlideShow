@@ -17,6 +17,7 @@ An example: https://f2b-login-helper-app-dev-ed.my.salesforce.com?login
 ![Document](https://f2b-login-helper-app-dev-ed--c.na16.content.force.com/servlet/servlet.ImageServer?id=015j00000004L8q&oid=00Dj0000001tMup)
 * Under Custom Settings, click "Manage" on the "Login Page Slideshow Images" object
 * Add a new custom settings record to this object for each image to be displayed in the slide show, setting the "Name" field to the same value from the "Document Unique Name" field, and the "Click URL for Image" field to a target URL if the user clicks on that image.
+
 ![Custom Settings Record](https://f2b-login-helper-app-dev-ed--c.na16.content.force.com/servlet/servlet.ImageServer?id=015j00000004L8v&oid=00Dj0000001tMup)
 
 #### Force.com Site Configuration
