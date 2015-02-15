@@ -4,7 +4,7 @@
 An example: https://f2b-login-helper-app-dev-ed.my.salesforce.com?login
 
 #### Installation:
-* Unmanaged Package Installer: https://login.salesforce.com/packaging/installPackage.apexp?p0=04tj0000001YpB6
+* Unmanaged Package Installer: https://login.salesforce.com/packaging/installPackage.apexp?p0=04tj0000001YpK0
 
 #### Prerequisites
 * Registered 'My Domain' for your Salesforce Org
