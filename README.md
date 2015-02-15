@@ -25,3 +25,7 @@ An example: https://f2b-login-helper-app-dev-ed.my.salesforce.com?login
 * Important: The "Clickjack Protection Level" setting must be set to "Allow framing by any page (no protection)" otherwise Salesforce will not allow the page to be displayed on the login page
 * A web address sub-folder is not required for the Site, but is helpful if more than one Site is in use in your Org.
 ![Site Configuration](https://f2b-login-helper-app-dev-ed--c.na16.content.force.com/servlet/servlet.ImageServer?id=015j00000004L8l&oid=00Dj0000001tMup)
+
+#### My Domain Configuration
+* Under My Domain, add the Force.com Site URL (must be the HTTPS version) you created above, specifying the LoginPageSlideShow visualforce page at the end.
+![My Domain Configuration](https://f2b-login-helper-app-dev-ed--c.na16.content.force.com/servlet/servlet.ImageServer?id=015j00000004L90&oid=00Dj0000001tMup)
