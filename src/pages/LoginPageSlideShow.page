@@ -1,0 +1,91 @@
+<!-- /** 
+* @author Michael Smith - Force2b, LLC
+* @date 02/14/2015
+*
+* @group LoginPage
+*
+* @description
+* Purpose: 	Used on the customized login page to display up to 5 rotating images in the
+*			main content window.
+*			- Intended to be used via a Force.com Site as a public page
+*			- Everything is built upon Custom Labels to avoid using a Controller
+*				or exposing content over a public site.
+* 
+* Notes:
+* - Custom Labels for up to 5 images. Set label to "null" to ignore
+* - Custom Label to set the duration between images. Default is "3000" (3 seconds)
+* - Custom Label to set the URL for each image when user clicks on the rotating image (can be "null")
+*
+*/ -->
+<apex:page showHeader="false" showChat="false" sidebar="false" standardStylesheets="false" 
+		applyBodyTag="false" cache="false" id="slideShowPage" controller="LoginPageSlideShowController" >
+
+<apex:variable value="390" var="imageHeight" />
+<apex:variable value="478" var="imageWidth" />
+
+<head>
+	<apex:includeScript value="https://code.jquery.com/jquery-2.1.3.min.js" />
+	<style>
+		body {
+			margin: 0; 
+		}
+		#slideshow {
+			position: relative; 
+			width: 489px; 
+			height: 411px; 
+			/*padding: 10px; */
+		}
+
+		#slideshow > div {
+			position: absolute;
+			top: 5px; 
+			left: 5px; 
+			right: 5px; 
+			bottom: 5px;
+		}
+		div#slideshow.noImagesMessage {
+			padding-top: 200px;
+			text-align: center;
+			font-weight: bold;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="slideshow">&nbsp;</div>
+</body>
+
+<script>
+
+	// Add each image to the array of images for the slide show
+	<apex:repeat var="imageURL" value="{!images}">
+		addSlideShowImage("{! imageURL }", "{! images[imageURL] }");
+	</apex:repeat>
+
+	// Only start the slideshow if there is more than one image
+	if ({! ImageListSize } > 1) {
+		$("#slideshow > div:gt(0)").hide();
+		setInterval(function() {
+		  $('#slideshow > div:first')
+			.fadeOut(1000)
+			.next()
+			.fadeIn(1000)
+			.end()
+			.appendTo('#slideshow');
+		}, {! $Label.LoginPageSlideshow_DurationMiliseconds });
+	}
+	if ({! ImageListSize } === 0) {
+		$("#slideshow").toggleClass('noImagesMessage').html("NO PUBLIC IMAGES ARE AVAILABLE TO DISPLAY");
+	}
+
+	function addSlideShowImage(imageURL, imageTarget) {
+		var div = "<div>" +
+			"<a href=\"" + imageTarget + "\" target=\"_new\">" +
+				"<img src=\"" + imageURL + "\" height=\"{!imageHeight}\" " +
+			"width=\"{!imageWidth}\" />" +
+			"</a></div>";
+		$("#slideshow").append(div);
+	}
+</script>
+
+</apex:page>

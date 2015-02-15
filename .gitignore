@@ -1,0 +1,10 @@
+# Sublime/Mavens files
+*.cmd
+*.sublime-project
+*.sublime-workspace
+*.sublime-settings
+*mm.log
+config/*
+debug/*
+deploy/*
+apex-scripts/log

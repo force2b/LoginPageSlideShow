@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>LoginPageSlideshow_DurationMiliseconds</fullName>
+        <categories>LoginPageSlideShow</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Milliseconds between each image on the Login Page Slide Show</shortDescription>
+        <value>5000</value>
+    </labels>
+</CustomLabels>
